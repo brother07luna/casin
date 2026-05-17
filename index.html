@@ -1,63 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Acceso Casinos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            background: #0f0f0f;
-            color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .box {
-            text-align: center;
-            width: 90%;
-            max-width: 400px;
-        }
-        h1 {
-            margin-bottom: 25px;
-        }
-        a {
-            display: block;
-            background: #1db954;
-            color: white;
-            padding: 50px;
-            margin: 20px 0;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        a:hover {
-            background: #2b4e38;
-        }
-        .respaldo {
-            background: #140733;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floky Casinos</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* ========= IMAGEN DE FONDO ========= */
+    background:url("fondo.png");
+    /* Cambiá FONDO.jpg por el nombre de tu imagen */
+    
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Oscurece el fondo */
+body::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(3px);
+}
+
+.box{
+    position:relative;
+    z-index:2;
+    width:95%;
+    max-width:450px;
+    text-align:center;
+}
+
+h1{
+    color:white;
+    font-size:42px;
+    margin-bottom:10px;
+    text-shadow:0 0 15px gold;
+}
+
+.sub{
+    color:#d9d9d9;
+    margin-bottom:35px;
+    font-size:16px;
+}
+
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:22px;
+    padding:22px;
+    transition:0.3s;
+    backdrop-filter:blur(8px);
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+a:hover{
+    transform:scale(1.05);
+    background:rgba(255,215,0,0.12);
+    border:1px solid gold;
+    box-shadow:0 0 25px rgba(255,215,0,0.5);
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.titulo{
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.desc{
+    color:#d6d6d6;
+    font-size:14px;
+}
+
+@media(max-width:600px){
+
+    h1{
+        font-size:32px;
+    }
+
+    a{
+        padding:18px;
+    }
+
+}
+
+</style>
 </head>
 <body>
-    <div class="box">
-        <h1>🎰 Acceso Casinos</h1>
-        <a class="respaldo" href="https://wa.me/5491127782971?text=holaa%20Floky%20quiero%20cargar%20mi%20nombre%20es:%20" target="_blank">
-     👩(Celuapuestas I)
-</a>
 
-<a class="respaldo" href="https://wa.me/5491166471536?text=holaa%20Floky%20quiero%20cargar%20mi%20nombre%20es:%20" target="_blank">
-     👩(Celuapuestas II)
-</a>
-        <a class="respaldo" href="https://wa.me/5491170824763?text=holaa%20Floky%20quiero%20cargar%20mi%20nombre%20es:%20" target="_blank">
-     👩(Celuapuestas III)
-</a>
-        <a class="respaldo" href="https://wa.me/5493446372988?text=holaa%20Floky%20quiero%20cargar%20mi%20nombre%20es:%20" target="_blank">
-     👩(Celuapuestas IIII)
-</a>
+<div class="box">
+
+    <h1>🎰 FLOTKY CASINOS</h1>
+    <p class="sub">Elegí un cajero y cargá tus fichas</p>
+
+    <div class="links">
+
+        <a href="https://wa.me/5491127782971?text=holaa%20Floky%20quiero%20cargar%20mi%20nombre%20es:%20" target="_blank">
+
+            <div class="icon">👩‍💼</div>
+            <div class="titulo">Celuapuestas I</div>
+            <div class="desc">Atención rápida</div>
+
+        </a>
+
+        <a href="https://wa.me/5491166471536?text=holaa%20Floky%20quiero%20cargar%20mi%20nombre%20es:%20" target="_blank">
+
+            <div class="icon">🎰</div>
+            <div class="titulo">Celuapuestas II</div>
+            <div class="desc">Disponible ahora</div>
+
+        </a>
+
+        <a href="https://wa.me/5491170824763?text=holaa%20Floky%20quiero%20cargar%20mi%20nombre%20es:%20" target="_blank">
+
+            <div class="icon">💎</div>
+            <div class="titulo">Celuapuestas III</div>
+            <div class="desc">Bonos exclusivos</div>
+
+        </a>
+
+        <a href="https://wa.me/5493446372988?text=holaa%20Floky%20quiero%20cargar%20mi%20nombre%20es:%20" target="_blank">
+
+            <div class="icon">🔥</div>
+            <div class="titulo">Celuapuestas IV</div>
+            <div class="desc">Disponible 24 horas</div>
+
+        </a>
+
     </div>
+
+</div>
+
 </body>
 </html>
-
-
