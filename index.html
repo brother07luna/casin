@@ -19,18 +19,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* ========= IMAGEN DE FONDO CORREGIDA ========= */
-    background: url("img/fondo.png");
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Mantiene el fondo fijo mientras deslizás */
-    
-    /* SE QUITÓ overflow:hidden PARA PERMITIR EL SCROLL */
     position: relative;
     padding: 20px 0; /* Espacio extra arriba y abajo para que no quede pegado al deslizar en celu */
+    background-color: #000; /* Fondo negro de respaldo mientras carga el video */
+}
+
+/* ========= VIDEO DE FONDO ========= */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video cubra toda la pantalla sin deformarse */
+    z-index: 0;
+    pointer-events: none; /* Evita que el video interfiera con los clics en los botones */
 }
 
 /* Oscurece el fondo de manera fija para que no se corte al hacer scroll */
@@ -129,15 +132,16 @@ a:hover{
 </head>
 <body>
 
+<video class="video-bg" autoplay loop muted playsinline>
+    <source src="img/fondito.mp4" type="video/mp4">
+</video>
+
 <div class="box">
 
     <h1>🎰 FLOKY CASINOS</h1>
     <p class="sub">Elegí un cajero y cargá tus fichas</p>
 
     <div class="links">
-
-       
-      
 
          <a href="https://wa.me/5491170824763?text=holaa%20Floky%20quiero%20cargar%20vengo%20de%20parte%20de%20alan%20mi%20nombre%20es:%20" target="_blank">
             <div class="icon">🏆</div>
@@ -166,7 +170,6 @@ a:hover{
             <div class="titulo">Celuapuestas I</div>
             <div class="desc">Sorteos y ruletas</div>
         </a>
-
 
     </div>
 
